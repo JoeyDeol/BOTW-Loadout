@@ -1,0 +1,32 @@
+[
+  {
+    "Weapon Name": "Master Sword",
+    "Weapon Image": "./public/assets/BotW_Master_Sword_Icon.png",
+    "Attack": 30,
+    "Description": "The Legendary sword that seals the darkness. Its blade gleams with a sacred luster that can oppose the Calamity. Only a hero chosen by the sword itself may wield it."
+  },
+  {
+    "Weapon Name": "Flameblade",
+    "Weapon Image": "./public/assets/BotW_Flameblade_Icon",
+    "Attack": 24,
+    "Description": "This magical sword was forged in the lava of Death Mountain. It leaves white-hot flames in its wake when the blade glows red."
+  },
+  {
+    "Weapon Name": "Boulder Breaker",
+    "Weapon Image": "./public/assets/BotW_Boulder_Breaker_Icon",
+    "Attack": 60,
+    "Description": "This two-handed weapon was once wielded by the Goron Champion Daruk. Daruk made swinging it around look easy, but a Hylian would need an immense amount of strength."
+  },
+  {
+    "Weapon Name": "Lightscale Trident",
+    "Weapon Image": "./public/assets/BotW_Lightscale_Trident_Icon",
+    "Attack": 22,
+    "Description": "A spear of peerless grace cherished by the Zora Champion Mipha. Although Mipha specialized in healing abilities, her spearmanship was in a class all its own."
+  },
+  {
+    "Weapon Name": "Scimitar of the Seven",
+    "Weapon Image": "./public/assets/BotW_Scimitar_of_the_Seven_Icon",
+    "Attack": 32,
+    "Description": "A famous sword once beloved by the Gerudo Champion Urbosa. It is said that when Urbosa swung this sword in battle, her movements resembled a beautiful dance."
+  }
+]
