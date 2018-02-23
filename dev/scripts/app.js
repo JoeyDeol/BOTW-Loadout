@@ -12,7 +12,6 @@ class App extends React.Component {
       return (
         <div>
           <h1>Hello</h1>
-          <img src="./public/assets/BotW_Master_Sword_Icon.png" alt=""/>
         </div>
       )
     }
