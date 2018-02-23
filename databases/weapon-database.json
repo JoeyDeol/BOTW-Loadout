@@ -7,25 +7,25 @@
   },
   {
     "Weapon Name": "Flameblade",
-    "Weapon Image": "./public/assets/BotW_Flameblade_Icon",
+    "Weapon Image": "./public/assets/BotW_Flameblade_Icon.png",
     "Attack": 24,
     "Description": "This magical sword was forged in the lava of Death Mountain. It leaves white-hot flames in its wake when the blade glows red."
   },
   {
     "Weapon Name": "Boulder Breaker",
-    "Weapon Image": "./public/assets/BotW_Boulder_Breaker_Icon",
+    "Weapon Image": "./public/assets/BotW_Boulder_Breaker_Icon.png",
     "Attack": 60,
     "Description": "This two-handed weapon was once wielded by the Goron Champion Daruk. Daruk made swinging it around look easy, but a Hylian would need an immense amount of strength."
   },
   {
     "Weapon Name": "Lightscale Trident",
-    "Weapon Image": "./public/assets/BotW_Lightscale_Trident_Icon",
+    "Weapon Image": "./public/assets/BotW_Lightscale_Trident_Icon.png",
     "Attack": 22,
     "Description": "A spear of peerless grace cherished by the Zora Champion Mipha. Although Mipha specialized in healing abilities, her spearmanship was in a class all its own."
   },
   {
     "Weapon Name": "Scimitar of the Seven",
-    "Weapon Image": "./public/assets/BotW_Scimitar_of_the_Seven_Icon",
+    "Weapon Image": "./public/assets/BotW_Scimitar_of_the_Seven_Icon.png",
     "Attack": 32,
     "Description": "A famous sword once beloved by the Gerudo Champion Urbosa. It is said that when Urbosa swung this sword in battle, her movements resembled a beautiful dance."
   }

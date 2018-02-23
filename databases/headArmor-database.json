@@ -1,0 +1,23 @@
+[
+  {
+    "Armor": "Barbarian Helm",
+    "Armor Image": "./public/assets/BotW_Barbarian_Helm_Icon.png",
+    "Defense": 3,
+    "Effect": "Attack Up",
+    "Description": "A helmet once worn by the warriors of an ancient warlike tribe from the Faron region. Wearing it draws out your inner animal, increasing your strength and battle prowess."
+  },
+  {
+    "Armor": "Climber's Bandanna",
+    "Armor Image": "./public/assets/BotW_Climber's_Bandanna_Icon.png",
+    "Defense": 3,
+    "Effect": "Climb Speed Up",
+    "Description": "It may look like a regular bandanna, but it's actually infused with ancient technology that enhances core strength to improve your climbing ability."
+  },
+  {
+    "Armor": "Hylian Hood",
+    "Armor Image": "./public/assets/BotW_Hylian_Hood_Icon.png",
+    "Defense": 3,
+    "Effect": "Null",
+    "Description": "A hood woven using traditional Hyrulean methods. It's made from a sturdy material to protect travelers from the harsh sun and weather."
+  }
+]

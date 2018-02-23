@@ -1,0 +1,23 @@
+[
+  {
+    "Armor": "Barbarian Armor",
+    "Armor Image": "./public/assets/BotW_Barbarian_Armor_Icon.png",
+    "Defense": 3,
+    "Effect": "Attack Up",
+    "Description": "Armor once favored by an ancient warlike tribe from the Faron region. The war paint bolsters your fighting spirit and raises your attack power."
+  },
+  {
+    "Armor": "Climber's Gear",
+    "Armor Image": "./public/assets/BotW_Climbing_Gear_Icon.png",
+    "Defense": 3,
+    "Effect": "Climb Speed Up",
+    "Description": "The ancient technology in this gear will make you a better climber. The special no-slip gloves help you use your energy more efficiently to facilitate nimble climbing."
+  },
+  {
+    "Armor": "Champion's Tunic",
+    "Armor Image": "./public/assets/BotW_Champion's_Tunic_Icon.png",
+    "Defense": 5,
+    "Effect": "Null",
+    "Description": "In ancient Hyrule, this garment could only be worn by one who had earned the respect of the royal family. Equipping it will reveal an enemy's life gauge."
+  }
+]

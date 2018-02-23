@@ -1,0 +1,23 @@
+[
+  {
+    "Armor": "Barbarian Leg Wraps",
+    "Armor Image": "./public/assets/BotW_Barbarian_Leg_Wraps_Icon.png",
+    "Defense": 3,
+    "Effect": "Attack Up",
+    "Description": "These leg wraps were favored by a warlike tribe from the Faron region long ago. They're adorned with traditional markings that bolster your fighting spirit to raise your attack power."
+  },
+  {
+    "Armor": "Climbing Boots",
+    "Armor Image": "./public/assets/BotW_Climbing_Boots_Icon.png",
+    "Defense": 3,
+    "Effect": "Climb Speed Up",
+    "Description": "These rock-climbing boots have special no-slip toes that help you cling to walls. This ancient technology facilitates more nimble climbing."
+  },
+  {
+    "Armor": "Hylian Trousers",
+    "Armor Image": "./public/assets/BotW_Hylian_Trousers_Icon.png",
+    "Defense": 3,
+    "Effect": "Null",
+    "Description": "Traditional dress trousers of Hyrule. The plush fabric makes these trousers quite comfortable, and their high durability makes them ideal for travelers."
+  }
+]
