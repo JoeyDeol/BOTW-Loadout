@@ -30,7 +30,6 @@ class Weapon extends React.Component {
     const dbref = firebase.database().ref('/Weapons');
     dbref.on('value', (snapshot) => {
       const weaponData = snapshot.val();
-      console.log(weaponData);
       this.setState({
         weapons: weaponData
       })
@@ -65,12 +64,16 @@ class Armor extends React.Component {
     }
   };
   componentDidMount() {
-    const dbref = firebase.database().ref('/Armor/Body Armor');
+    const dbref = firebase.database().ref('/Armor');
     dbref.on('value', (snapshot) => {
-      const bodyArmorData = snapshot.val();
-      console.log(bodyArmorData);
+      const armorData = snapshot.val();
+      const headArmorData = armorData['Head Armor'];
+      const bodyArmorData = armorData['Body Armor'];
+      const legArmorData = armorData['Leg Armor'];
       this.setState({
-        // weapons: weaponData
+        headArmor: headArmorData,
+        bodyArmor: bodyArmorData,
+        legArmor: legArmorData
       })
     })
   };
@@ -78,16 +81,39 @@ class Armor extends React.Component {
   render() {
     return (
       <div>
-        {/* {this.state.weapons.map((item, i) => {
+        {this.state.headArmor.map((item, i) => {
           return (
-            <div className="weapons" key={item['Weapon Name'].replace(' ', '-').toLowerCase()}>
-              <h2>{item['Weapon Name']}</h2>
-              <img src={item['Weapon Image']} />
-              <p>{item.Attack}</p>
+            <div className="headArmor" key={item['Armor'].replace(' ', '-').toLowerCase()}>
+              <h2>{item['Armor']}</h2>
+              <img src={item['Armor Image']} />
+              <p>{item.Defense}</p>
               <p>{item.Description}</p>
+              <p>{item.Effect}</p>
             </div>
           )
-        })} */}
+        })}
+        {this.state.bodyArmor.map((item, i) => {
+          return (
+            <div className="bodyArmor" key={item['Armor'].replace(' ', '-').toLowerCase()}>
+              <h2>{item['Armor']}</h2>
+              <img src={item['Armor Image']} />
+              <p>{item.Defense}</p>
+              <p>{item.Description}</p>
+              <p>{item.Effect}</p>
+            </div>
+          )
+        })}
+        {this.state.legArmor.map((item, i) => {
+          return (
+            <div className="legArmor" key={item['Armor'].replace(' ', '-').toLowerCase()}>
+              <h2>{item['Armor']}</h2>
+              <img src={item['Armor Image']} />
+              <p>{item.Defense}</p>
+              <p>{item.Description}</p>
+              <p>{item.Effect}</p>
+            </div>
+          )
+        })}
       </div>
     )
   }
@@ -105,25 +131,40 @@ class App extends React.Component {
     }
 
     getWeapon () {
-      this.setState({
-        showWeapons: true,
-      })
+      if (this.state.showWeapons === false) {
+        this.setState({
+          showWeapons: true
+        })
+      } else {
+        this.setState({
+          showWeapons: false
+        })
+      }
     }
 
-    getArmor () {
-      this.setState({
-        showArmors: true,
-      })
+    getArmor () { 
+      if (this.state.showArmors === false) {
+        this.setState({
+          showArmors: true
+          })
+      } else {
+        this.setState({
+          showArmors: false
+        })
+      }
     }
 
     render() {
       return (
         <div>
-          <button onClick={this.getWeapon}>Weapons</button>
-          {this.state.showWeapons ? <Weapon /> : null}
-
-          <button onClick={this.getArmor}>Armors</button>
-          {this.state.showArmors ? <Armor /> : null}
+          <div className='weapons__section'>
+            <button onClick={this.getWeapon}>Weapons</button>
+            {this.state.showWeapons ? <Weapon /> : null}
+          </div>
+          <div className='armors__section'>
+            <button onClick={this.getArmor}>Armors</button>
+            {this.state.showArmors ? <Armor /> : null}
+          </div>
         </div>
       )
     }
