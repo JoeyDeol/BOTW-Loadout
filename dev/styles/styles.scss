@@ -1,0 +1,14 @@
+// @import "components/setup";
+// @import "components/base";
+// @import "components/header";
+// ASK ABOUT THIS ON MONDAY. IMPORTING JUST CAUSES EVERYTHING TO COMPILE TWICE BECAUSE OF GULP, SO WHAT IS THE POINT OF A STYLE.SCSS FILE NOW?
+
+body {
+    background-color: crimson;
+}
+
+.wrapper {
+    max-width: 940px;
+    margin: 0 auto; 
+    background-color: blue;
+}

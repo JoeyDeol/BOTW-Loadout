@@ -1,0 +1,20 @@
+[
+  {
+    "Meal": "Salt-Grilled Meat",
+    "Meal Image": "./public/assets/BotW_Salt-Grilled_Meat_Icon.png",
+    "Ingredients": "Rock Salt, Raw Meat or Raw Bird Drumstick",
+    "Description": "Short on ingredients? Just rub some meat in salt and cook it for a simple, tasty dish."
+  },
+  {
+    "Meal": "Seafood Fried Rice",
+    "Meal Image": "./public/assets/BotW_Seafood_Fried_Rice_Icon.png",
+    "Ingredients": "Goron Spice, Hylian Rice, Hearty Blueshell Snail or Any Porgy",
+    "Description": "Various seafood has been sauteed with rice. The stronger the flame, the tastier the dish!"
+  },
+  {
+    "Meal": "Vegetable Risotto",
+    "Meal Image": "./public/assets/BotW_Vegetable_Risotto_Icon.png",
+    "Ingredients": "Any Carrot or Pumpkin, Hylian Rice, Goat Butter, Rock Salt",
+    "Description": "The sweetness of the ingredients gives this risotto a mild flavor."
+  }
+]

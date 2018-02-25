@@ -119,55 +119,130 @@ class Armor extends React.Component {
   }
 };
 
+class Food extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      food: [],
+    }
+  };
+
+  componentDidMount() {
+    const dbref = firebase.database().ref('/Food');
+    dbref.on('value', (snapshot) => {
+      const foodData = snapshot.val();
+      this.setState({
+        food: foodData
+      })
+    })
+  };
+
+  render() {
+    return (
+      <div>
+        {this.state.food.map((item, i) => {
+          return (
+            <div className="food" key={item['Meal'].replace(' ', '-').toLowerCase()}>
+              <h2>{item['Meal']}</h2>
+              <img src={item['Meal Image']} />
+              <p>{item.Ingredients}</p>
+              <p>{item.Description}</p>
+            </div>
+          )
+        })}
+      </div>
+    )
+  }
+};
+
 class App extends React.Component {
-    constructor() {
-      super();
-      this.state = {
-        showWeapons: false,
-        showArmors: false,
-      };
-    this.getWeapon = this.getWeapon.bind(this);
-    this.getArmor = this.getArmor.bind(this);
-    }
+  constructor() {
+    super();
+    this.state = {
+      showWeapons: false,
+      showArmors: false,
+      showFood: false,
+    };
+  this.getWeapon = this.getWeapon.bind(this);
+  this.getArmor = this.getArmor.bind(this);
+    this.getFood = this.getFood.bind(this);
+  }
 
-    getWeapon () {
-      if (this.state.showWeapons === false) {
-        this.setState({
-          showWeapons: true
-        })
-      } else {
-        this.setState({
-          showWeapons: false
-        })
-      }
+  getWeapon () {
+    if (this.state.showWeapons === false) {
+      this.setState({
+        showWeapons: true
+      })
+    } else {
+      this.setState({
+        showWeapons: false
+      })
     }
+  }
 
-    getArmor () { 
-      if (this.state.showArmors === false) {
-        this.setState({
-          showArmors: true
-          })
-      } else {
-        this.setState({
-          showArmors: false
+  getArmor () { 
+    if (this.state.showArmors === false) {
+      this.setState({
+        showArmors: true
         })
-      }
+    } else {
+      this.setState({
+        showArmors: false
+      })
     }
+  }
 
-    render() {
-      return (
-        <div>
-          <div className='weapons__section'>
-            <button onClick={this.getWeapon}>Weapons</button>
-            {this.state.showWeapons ? <Weapon /> : null}
+  getFood() {
+    if (this.state.showFood === false) {
+      this.setState({
+        showFood: true
+      })
+    } else {
+      this.setState({
+        showFood: false
+      })
+    }
+  }
+
+  render() {
+    return (
+      <div>
+        <header>
+          <div className="wrapper">
+            <h1>Breath of the Wild Loadouts</h1>
+            <h3>Focus On Your Adventure</h3>
           </div>
-          <div className='armors__section'>
-            <button onClick={this.getArmor}>Armors</button>
-            {this.state.showArmors ? <Armor /> : null}
+        </header>
+        <main>
+          <div className="wrapper">
+            <section>
+              <div className='weapons__section'>
+                <button onClick={this.getWeapon}>Weapons</button>
+                {this.state.showWeapons ? <Weapon /> : null}
+              </div>
+            </section>
+            <section>
+              <div className='armors__section'>
+                <button onClick={this.getArmor}>Armors</button>
+                {this.state.showArmors ? <Armor /> : null}
+              </div>
+            </section>
+            <section>
+              <div className='Food__section'>
+                <button onClick={this.getFood}>Food</button>
+                {this.state.showFood ? <Food /> : null}
+              </div>
+            </section>
           </div>
-        </div>
-      )
-    }
+        </main>
+        <footer>
+          <div className="wrapper">
+            <h4>Created By: Joey Deol</h4>
+          </div>
+        </footer>
+      </div>
+    )
+  }
 };
 
 ReactDOM.render(<App />, document.getElementById('app'));
