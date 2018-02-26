@@ -1,4 +1,37 @@
 header {
-    background-color: green;
-    margin-bottom: 100px;
+    background-image: url(../assets/headerHero.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 80px;
+    padding-bottom: 55px;
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Medula One', cursive;
+    letter-spacing: 10px;
+    @include remCalc(84);
+}
+
+header h3 {
+    letter-spacing: 5px;
+    @include remCalc(30);
+}
+
+header a {
+    display: block;
+    background-color:#B99F65;
+    margin: 0 auto;
+    width: 130px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 50px;
+    margin-top: 25px;
+    text-transform: uppercase;
+    transition: all 0.5s;
+    @include remCalc(16);
+    &:hover {
+        background-color: #fff;
+        color: #B99F65;
+    }
 }

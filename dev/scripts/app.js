@@ -24,6 +24,7 @@ class Weapon extends React.Component {
     this.state = {
       weapons: [],
     }
+  // this.console = this.console.bind(this);
   };
 
   componentDidMount() {
@@ -36,16 +37,23 @@ class Weapon extends React.Component {
     })
   };
 
+  // console(item) {
+  //   console.log("Got Clicked")
+  //   console.log(item);
+  // }
+
   render() {
     return (
       <div>
-          {this.state.weapons.map((item, i) => {
+          {this.state.weapons.map((item) => {
             return (
-              <div className="weapons" key={item['Weapon Name'].replace(' ','-').toLowerCase()}>
+              <div 
+              // onClick={() => {<App data={item}/>}} 
+              className="weapons" key={item['Weapon Name'].replace(' ','-').toLowerCase()}>
                 <h2>{item['Weapon Name']}</h2>
                 <img src={item['Weapon Image']} />
-                <p>{item.Attack}</p>
                 <p>{item.Description}</p>
+                <p>Attack: {item.Attack}</p>
               </div>
             )
           })}  
@@ -83,34 +91,34 @@ class Armor extends React.Component {
       <div>
         {this.state.headArmor.map((item, i) => {
           return (
-            <div className="headArmor" key={item['Armor'].replace(' ', '-').toLowerCase()}>
+            <div className="headArmor armors" key={item['Armor'].replace(' ', '-').toLowerCase()}>
               <h2>{item['Armor']}</h2>
               <img src={item['Armor Image']} />
-              <p>{item.Defense}</p>
               <p>{item.Description}</p>
-              <p>{item.Effect}</p>
+              <p><span>Defense:</span> {item.Defense}</p>
+              <p><span>Effect:</span> {item.Effect}</p>
             </div>
           )
         })}
         {this.state.bodyArmor.map((item, i) => {
           return (
-            <div className="bodyArmor" key={item['Armor'].replace(' ', '-').toLowerCase()}>
+            <div className="bodyArmor armors" key={item['Armor'].replace(' ', '-').toLowerCase()}>
               <h2>{item['Armor']}</h2>
               <img src={item['Armor Image']} />
-              <p>{item.Defense}</p>
               <p>{item.Description}</p>
-              <p>{item.Effect}</p>
+              <p><span>Defense:</span> {item.Defense}</p>
+              <p><span>Effect:</span> {item.Effect}</p>
             </div>
           )
         })}
         {this.state.legArmor.map((item, i) => {
           return (
-            <div className="legArmor" key={item['Armor'].replace(' ', '-').toLowerCase()}>
+            <div className="legArmor armors" key={item['Armor'].replace(' ', '-').toLowerCase()}>
               <h2>{item['Armor']}</h2>
               <img src={item['Armor Image']} />
-              <p>{item.Defense}</p>
               <p>{item.Description}</p>
-              <p>{item.Effect}</p>
+              <p><span>Defense:</span> {item.Defense}</p>
+              <p><span>Effect:</span> {item.Effect}</p>
             </div>
           )
         })}
@@ -145,8 +153,8 @@ class Food extends React.Component {
             <div className="food" key={item['Meal'].replace(' ', '-').toLowerCase()}>
               <h2>{item['Meal']}</h2>
               <img src={item['Meal Image']} />
-              <p>{item.Ingredients}</p>
               <p>{item.Description}</p>
+              <p><span>Ingredients:</span> {item.Ingredients}</p>
             </div>
           )
         })}
@@ -155,6 +163,24 @@ class Food extends React.Component {
   }
 };
 
+class UserLoadout extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      userWeapon: [],
+      userHeadArmor: [],
+      userBodyArmor: [],
+      userLegArmor: [],
+      userFood: [],
+    }
+  }
+  render() {
+    return (
+      <h2>Hello</h2>
+    )
+  }
+}
+
 class App extends React.Component {
   constructor() {
     super();
@@ -162,10 +188,12 @@ class App extends React.Component {
       showWeapons: false,
       showArmors: false,
       showFood: false,
+      userSelect: false,
     };
   this.getWeapon = this.getWeapon.bind(this);
   this.getArmor = this.getArmor.bind(this);
-    this.getFood = this.getFood.bind(this);
+  this.getFood = this.getFood.bind(this);
+  // this.getUserSelect = this.getUserSelect.bind(this);
   }
 
   getWeapon () {
@@ -204,39 +232,61 @@ class App extends React.Component {
     }
   }
 
+  // getUserSelect() {
+  //   if (this.state.userSelect === false) {
+  //     this.setState({
+  //       userSelect: true
+  //     })
+  //   } else {
+  //     this.setState({
+  //       userSelect: false
+  //     })
+  //   }
+  // }
+
   render() {
     return (
       <div>
         <header>
           <div className="wrapper">
             <h1>Breath of the Wild Loadouts</h1>
+            <img src="./public/assets/zelda-botw-logo.png" alt=""/>
             <h3>Focus On Your Adventure</h3>
+            <a>Start</a>
           </div>
         </header>
         <main>
           <div className="wrapper">
-            <section>
-              <div className='weapons__section'>
+            <section className='weapons__section'>
+              <div className='weapons__list'>
                 <button onClick={this.getWeapon}>Weapons</button>
                 {this.state.showWeapons ? <Weapon /> : null}
               </div>
             </section>
-            <section>
-              <div className='armors__section'>
+            <section className='armors__section'>
+              <div className='armors__list'>
                 <button onClick={this.getArmor}>Armors</button>
                 {this.state.showArmors ? <Armor /> : null}
               </div>
             </section>
-            <section>
-              <div className='Food__section'>
+            <section className='food__section'>
+              <div className='food__list'>
                 <button onClick={this.getFood}>Food</button>
                 {this.state.showFood ? <Food /> : null}
               </div>
             </section>
           </div>
+          <div className="wrapper">
+            <section>
+              <div className="userLoadout">
+                <UserLoadout />
+              </div>  
+            </section>
+          </div>
         </main>
         <footer>
           <div className="wrapper">
+            <h2>It's Dangerous to go Alone...</h2>
             <h4>Created By: Joey Deol</h4>
           </div>
         </footer>

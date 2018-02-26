@@ -1,0 +1,52 @@
+main .wrapper{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    text-align: center;
+}
+
+main button {
+    background-color: #B99F65;
+    padding: 10px 30px;
+    margin-bottom: 10px;
+    border-radius: 50px;
+    border: 2px solid transparent;
+    color: white;
+    transition: all 0.5s;
+    &:hover {
+        background-color: white;
+        border: 2px solid #B99F65;
+        color: #B99F65;
+    }
+}
+
+.weapons__section {
+    width: 33.3333%;
+}
+
+.armors__section {
+    width: 33.3333%;
+}
+
+.food__section {
+    width: 33.3333%;
+}
+
+.weapons__list {
+    padding: 0 5px;
+    height: 600px;
+    overflow: scroll;
+}
+
+.armors__list {
+    padding: 0 5px;
+    height: 600px;
+    overflow: scroll;
+}
+
+.food__list  {
+    padding: 0 5px;
+    height: 600px;
+    overflow: scroll;
+}
