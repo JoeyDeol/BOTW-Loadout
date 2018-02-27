@@ -2,10 +2,31 @@
     background-color: #00A3DA;
 }
 
+.armors {
+    padding: 10px 30px; 
+    border-radius: 10px;
+}
+
 .armors h2 {
     margin: 20px 0px;
 }
 
 .armors img {
     margin-bottom: 20px;
+}
+
+.armors p {
+    margin-bottom: 20px;
+}
+
+.armors .description {
+    line-height: 30px;
+}
+
+.display_armors {
+    background: #00A3DA;
+}
+
+.hide_armors {
+    display: none;
 }

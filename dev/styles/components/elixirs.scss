@@ -1,32 +1,32 @@
-.food:hover {
+.elixir:hover {
     background-color: #00A3DA;
 }
 
-.food {
+.elixir {
     padding: 10px 30px; 
     border-radius: 10px;
 }
 
-.food h2 {
+.elixir h2 {
     margin: 20px 0px;
 }
 
-.food img {
+.elixir img {
+    margin-bottom: 35px;
+}
+
+.elixir p {
     margin-bottom: 20px;
 }
 
-.food p {
-    margin-bottom: 20px;
-}
-
-.food .description {
+.elixir .description {
     line-height: 30px;
 }
 
-.display_food {
+.display_elixir {
     background: #00A3DA;
 }
 
-.hide_food {
+.hide_elixir {
     display: none;
 }

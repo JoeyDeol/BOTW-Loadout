@@ -1,11 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
-// First thing I want to render to the page is the component that is the landing/start page, which the user will start out on.
-// Then when the user interacts with each of the buttons, I want each of the corresponding buttons to populate the page with certain items from the Firebase database I have set up.
-// Each of those buttons once pressed with have an image, item name and an item description. All of which will be rendered from the firebase database that I create.
-// Also as the user cycles through the items, there should be displays on the far right that update along with the item changes.
-// Finally if I can, in a stretch goal, have the user be able to save each of the loadouts and have that associated with their personal account.
 
 // Initialize Firebase
 var config = {
@@ -24,7 +20,7 @@ class Weapon extends React.Component {
     this.state = {
       weapons: [],
     }
-  // this.console = this.console.bind(this);
+  this.weaponSelect = this.weaponSelect.bind(this);
   };
 
   componentDidMount() {
@@ -37,23 +33,31 @@ class Weapon extends React.Component {
     })
   };
 
-  // console(item) {
-  //   console.log("Got Clicked")
-  //   console.log(item);
-  // }
+  weaponSelect(e) {
+    e.target.closest('.weapons').classList.add('display_weapons');
+    const list = document.getElementsByClassName('weapons');
+
+    for (let i = 0; i < list.length; i++) {
+      if (list[i].className == 'weapons display_weapons') {
+      }else {
+        list[i].classList.add('hide_weapons');
+      }
+    }
+  }
 
   render() {
     return (
       <div>
-          {this.state.weapons.map((item) => {
+        {this.state.weapons.map((item) => {
+          const id = item['Weapon Name'].replace(' ', '-').toLowerCase();
             return (
-              <div 
-              // onClick={() => {<App data={item}/>}} 
-              className="weapons" key={item['Weapon Name'].replace(' ','-').toLowerCase()}>
+              <div id={id}
+                className='weapons' key={id}>
                 <h2>{item['Weapon Name']}</h2>
                 <img src={item['Weapon Image']} />
-                <p>{item.Description}</p>
                 <p>Attack: {item.Attack}</p>
+                <p className="description">{item.Description}</p>
+                <button onClick={(e) => this.weaponSelect(e)}>Select</button>
               </div>
             )
           })}  
@@ -66,59 +70,47 @@ class Armor extends React.Component {
   constructor() {
     super();
     this.state = {
-      headArmor: [],
-      bodyArmor: [],
-      legArmor: []
+      armors: [],
     }
+    this.armorSelect = this.armorSelect.bind(this);
   };
+
   componentDidMount() {
-    const dbref = firebase.database().ref('/Armor');
+    const dbref = firebase.database().ref('/ArmorSets');
     dbref.on('value', (snapshot) => {
       const armorData = snapshot.val();
-      const headArmorData = armorData['Head Armor'];
-      const bodyArmorData = armorData['Body Armor'];
-      const legArmorData = armorData['Leg Armor'];
       this.setState({
-        headArmor: headArmorData,
-        bodyArmor: bodyArmorData,
-        legArmor: legArmorData
+        armors: armorData
       })
     })
   };
 
+  armorSelect(e) {
+    e.target.closest('.armors').classList.add('display_armors');
+    const list = document.getElementsByClassName('armors');
+
+    for (let i = 0; i < list.length; i++) {
+      if (list[i].className == 'armors display_armors') {
+      } else {
+        list[i].classList.add('hide_armors');
+      }
+    }
+  } 
+
   render() {
     return (
       <div>
-        {this.state.headArmor.map((item, i) => {
+        {this.state.armors.map((item, i) => {
+          const id = item['Armor'].replace(' ', '-').toLowerCase();
           return (
-            <div className="headArmor armors" key={item['Armor'].replace(' ', '-').toLowerCase()}>
+            <div id={id} className="armors" key={id}>
               <h2>{item['Armor']}</h2>
               <img src={item['Armor Image']} />
-              <p>{item.Description}</p>
               <p><span>Defense:</span> {item.Defense}</p>
               <p><span>Effect:</span> {item.Effect}</p>
-            </div>
-          )
-        })}
-        {this.state.bodyArmor.map((item, i) => {
-          return (
-            <div className="bodyArmor armors" key={item['Armor'].replace(' ', '-').toLowerCase()}>
-              <h2>{item['Armor']}</h2>
-              <img src={item['Armor Image']} />
-              <p>{item.Description}</p>
-              <p><span>Defense:</span> {item.Defense}</p>
-              <p><span>Effect:</span> {item.Effect}</p>
-            </div>
-          )
-        })}
-        {this.state.legArmor.map((item, i) => {
-          return (
-            <div className="legArmor armors" key={item['Armor'].replace(' ', '-').toLowerCase()}>
-              <h2>{item['Armor']}</h2>
-              <img src={item['Armor Image']} />
-              <p>{item.Description}</p>
-              <p><span>Defense:</span> {item.Defense}</p>
-              <p><span>Effect:</span> {item.Effect}</p>
+              <p><span>Effect:</span> {item['Full Set Bonus']}</p>
+              <p className='description'>{item.Description}</p>
+              <button onClick={(e) => this.armorSelect(e)}>Select</button>
             </div>
           )
         })}
@@ -127,34 +119,50 @@ class Armor extends React.Component {
   }
 };
 
-class Food extends React.Component {
+class Elixir extends React.Component {
   constructor() {
     super();
     this.state = {
-      food: [],
+      elixirs: [],
     }
+    this.elixirSelect = this.elixirSelect.bind(this);
   };
 
   componentDidMount() {
-    const dbref = firebase.database().ref('/Food');
+    const dbref = firebase.database().ref('/Elixirs');
     dbref.on('value', (snapshot) => {
-      const foodData = snapshot.val();
+      const elixirData = snapshot.val();
       this.setState({
-        food: foodData
+        elixirs: elixirData
       })
     })
   };
 
+  elixirSelect(e) {
+    e.target.closest('.elixir').classList.add('display_elixir');
+    const list = document.getElementsByClassName('elixir');
+
+    for (let i = 0; i < list.length; i++) {
+      if (list[i].className == 'elixir display_elixir') {
+      } else {
+        list[i].classList.add('hide_elixir');
+      }
+    }
+  } 
+
   render() {
     return (
       <div>
-        {this.state.food.map((item, i) => {
+        {this.state.elixirs.map((item, i) => {
+          const id = item['Elixir'].replace(' ', '-').toLowerCase();
           return (
-            <div className="food" key={item['Meal'].replace(' ', '-').toLowerCase()}>
-              <h2>{item['Meal']}</h2>
-              <img src={item['Meal Image']} />
-              <p>{item.Description}</p>
+            <div id={id} className="elixir" key={id}>
+              <h2>{item['Elixir']}</h2>
+              <img src={item['Elixir Image']} />
+              <p><span>Effect:</span> {item.Effect}</p>
               <p><span>Ingredients:</span> {item.Ingredients}</p>
+              <p className='description'>{item.Description}</p>
+              <button onClick={(e) => this.elixirSelect(e)}>Select</button>
             </div>
           )
         })}
@@ -162,24 +170,6 @@ class Food extends React.Component {
     )
   }
 };
-
-class UserLoadout extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      userWeapon: [],
-      userHeadArmor: [],
-      userBodyArmor: [],
-      userLegArmor: [],
-      userFood: [],
-    }
-  }
-  render() {
-    return (
-      <h2>Hello</h2>
-    )
-  }
-}
 
 class App extends React.Component {
   constructor() {
@@ -187,13 +177,12 @@ class App extends React.Component {
     this.state = {
       showWeapons: false,
       showArmors: false,
-      showFood: false,
+      showElixir: false,
       userSelect: false,
     };
   this.getWeapon = this.getWeapon.bind(this);
   this.getArmor = this.getArmor.bind(this);
-  this.getFood = this.getFood.bind(this);
-  // this.getUserSelect = this.getUserSelect.bind(this);
+  this.getElixir = this.getElixir.bind(this);
   }
 
   getWeapon () {
@@ -220,29 +209,17 @@ class App extends React.Component {
     }
   }
 
-  getFood() {
-    if (this.state.showFood === false) {
+  getElixir() {
+    if (this.state.showElixir === false) {
       this.setState({
-        showFood: true
+        showElixir: true
       })
     } else {
       this.setState({
-        showFood: false
+        showElixir: false
       })
     }
   }
-
-  // getUserSelect() {
-  //   if (this.state.userSelect === false) {
-  //     this.setState({
-  //       userSelect: true
-  //     })
-  //   } else {
-  //     this.setState({
-  //       userSelect: false
-  //     })
-  //   }
-  // }
 
   render() {
     return (
@@ -252,10 +229,10 @@ class App extends React.Component {
             <h1>Breath of the Wild Loadouts</h1>
             <img src="./public/assets/zelda-botw-logo.png" alt=""/>
             <h3>Focus On Your Adventure</h3>
-            <a>Start</a>
+            <AnchorLink href="#loadoutStart">Start</AnchorLink>
           </div>
         </header>
-        <main>
+        <main id="loadoutStart">
           <div className="wrapper">
             <section className='weapons__section'>
               <div className='weapons__list'>
@@ -269,23 +246,17 @@ class App extends React.Component {
                 {this.state.showArmors ? <Armor /> : null}
               </div>
             </section>
-            <section className='food__section'>
-              <div className='food__list'>
-                <button onClick={this.getFood}>Food</button>
-                {this.state.showFood ? <Food /> : null}
+            <section className='elixir__section'>
+              <div className='elixir__list'>
+                <button onClick={this.getElixir}>Elixirs</button>
+                {this.state.showElixir ? <Elixir /> : null}
               </div>
             </section>
           </div>
-          <div className="wrapper">
-            <section>
-              <div className="userLoadout">
-                <UserLoadout />
-              </div>  
-            </section>
-          </div>
+          <AnchorLink href="#loadoutEnd">And Remember...</AnchorLink>
         </main>
         <footer>
-          <div className="wrapper">
+          <div id="loadoutEnd" className="wrapper">
             <h2>It's Dangerous to go Alone...</h2>
             <h4>Created By: Joey Deol</h4>
           </div>

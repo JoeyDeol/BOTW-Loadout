@@ -2,10 +2,31 @@
     background-color: #00A3DA;
 }
 
+.weapons {
+    padding: 10px 30px; 
+    border-radius: 10px;
+}
+
 .weapons h2 {
     margin: 20px 0px;
 }
 
 .weapons img {
     margin-bottom: 20px;
+}
+
+.weapons p {
+    margin-bottom: 20px;
+}
+
+.weapons .description {
+    line-height: 30px;
+}
+
+.display_weapons {
+    background: #00A3DA;
+}
+
+.hide_weapons {
+    display: none;
 }

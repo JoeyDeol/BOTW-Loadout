@@ -1,0 +1,86 @@
+[
+  {
+    "Elixir": "Chilly Elixir",
+    "Elixir Image": "./public/assets/BotW-Chilly-elixir.png",
+    "Ingredients": "Chilly Critter\nMonster Part",
+    "Effect": "Heat Resistance",
+    "Description": "Grants a X-level cooling effect, raising your body's resistance to heat. Crucial for long journeys through the desert."
+  },
+  {
+    "Elixir": "Electro Elixir",
+    "Elixir Image": "./public/assets/BotW-Electro-elixir.png",
+    "Ingredients": "Electro Critter\nMonster Part",
+    "Effect": "Electricity Resistance",
+    "Description": "Grants a X-level resistance to electricity. Useful against enemies with electrical attacks."
+  },
+  {
+    "Elixir": "Enduring Elixir",
+    "Elixir Image": "./public/assets/BotW-Enduring-elixir.png",
+    "Ingredients": "Enduring Critter\nMonster Part",
+    "Effect": "Extra Stamina",
+    "Description": "Restores stamina and temporarily extends your Stamina Wheel. The additional stamina will disappear as it's used."
+  },
+  {
+    "Elixir": "Energizing Elixir",
+    "Elixir Image": "./public/assets/BotW-Energizing-elixir.png",
+    "Ingredients": "Energizing Critter\nMonster Part",
+    "Effect": "Restores Stamina",
+    "Description": "Restores your Stamina, which is used when performing physical actions such as climbing walls and swimming."
+  },
+  {
+    "Elixir": "Fairy Tonic",
+    "Elixir Image": "./public/assets/BotW-Fairy-tonic.png",
+    "Ingredients": "Fairy",
+    "Effect": "Restores Hearts",
+    "Description": "This powerful recovery elixir harnesses the power of fairies. It has a sweet fragrance."
+  },
+  {
+    "Elixir": "Fireproof Elixir",
+    "Elixir Image": "./public/assets/BotW-Fireproof-elixir.png",
+    "Ingredients": "Fireproof Critter\nMonster Part",
+    "Effect": "Flame Guard",
+    "Description": "Grants a fireproof effect, which prevents your body from catching fire. Be sure to pack this when venturing out to explore Death Mountain."
+  },
+  {
+    "Elixir": "Hasty Elixir",
+    "Elixir Image": "./public/assets/BotW-Hasty-elixir.png",
+    "Ingredients": "Hasty Critter\nMonster Part",
+    "Effect": "Speed Up",
+    "Description": "Grants a X-level haste effect, which boosts your movement speed while running, swimming, or climbing."
+  },
+  {
+    "Elixir": "Hearty Elixir",
+    "Elixir Image": "./public/assets/BotW-Hearty-elixir.png",
+    "Ingredients": "Hearty Animal\nMonster Part",
+    "Effect": "Extra Hearts",
+    "Description": "Restores you to full health and increases your maximum hearts. The additional hearts are lost as you take damage."
+  },
+  {
+    "Elixir": "Mighty Elixir",
+    "Elixir Image": "./public/assets/BotW-Mighty-elixir.png",
+    "Ingredients": "Mighty Animal\nMonster Part",
+    "Effect": "Attack Up",
+    "Description": "Grants a X-level increased attack effect, which boost the strength of your strikes. Best to use before facing difficult to defeat enemies."
+  },
+  {
+    "Elixir": "Sneaky Elixir",
+    "Elixir Image": "./public/assets/BotW-Sneaky-elixir.png",
+    "Ingredients": "Sneaky Critter\nMonster Part",
+    "Effect": "Increased sneak ability",
+    "Description": "Grants a X-level stealth effect, which calms the nerves and silences footfalls. Allows you to move about undetected by monsters and animals."
+  },
+  {
+    "Elixir": "Spicy Elixir",
+    "Elixir Image": "./public/assets/BotW-Spicy-elixir.png",
+    "Ingredients": "Spicy Critter\nMonster Part",
+    "Effect": "Cold Resistance",
+    "Description": "Warms your body from its core, increasing your resistance to cold environments. Very useful in the snow-covered mountains."
+  },
+  {
+    "Elixir": "Tough Elixir",
+    "Elixir Image": "./public/assets/BotW-Tough-elixir.png",
+    "Ingredients": "Tough Critter\nMonster Part",
+    "Effect": "Defense Up",
+    "Description": "Grants a X-level toughness effect, which fortifies your bones to strengthen your defense. Best to use before facing off against hard-hitting enemies."
+  }
+]

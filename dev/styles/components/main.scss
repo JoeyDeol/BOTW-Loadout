@@ -21,6 +21,25 @@ main button {
     }
 }
 
+main a {
+    display: block;
+    background-color:#B99F65;
+    color: white;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    width: 200px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 50px;
+    text-align: center;
+    transition: all 0.5s;
+    @include remCalc(16);
+    &:hover {
+        background-color: #fff;
+        color: #B99F65;
+    }
+}
+
 .weapons__section {
     width: 33.3333%;
 }
@@ -29,24 +48,24 @@ main button {
     width: 33.3333%;
 }
 
-.food__section {
+.elixir__section {
     width: 33.3333%;
 }
 
 .weapons__list {
-    padding: 0 5px;
+    padding: 0 20px;
     height: 600px;
     overflow: scroll;
 }
 
 .armors__list {
-    padding: 0 5px;
-    height: 600px;
+    padding: 0 20px;
+    height: 770px;
     overflow: scroll;
 }
 
-.food__list  {
-    padding: 0 5px;
+.elixir__list  {
+    padding: 0 20px;
     height: 600px;
     overflow: scroll;
 }
