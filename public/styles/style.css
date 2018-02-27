@@ -1,0 +1,514 @@
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+  display: block; }
+
+audio, canvas, video {
+  display: inline-block; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+[hidden] {
+  display: none; }
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+a:focus {
+  outline: thin dotted; }
+
+a:active, a:hover {
+  outline: 0; }
+
+h1 {
+  font-size: 2em; }
+
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+b, strong {
+  font-weight: 700; }
+
+dfn {
+  font-style: italic; }
+
+mark {
+  background: #ff0;
+  color: #000; }
+
+code, kbd, pre, samp {
+  font-family: monospace, serif;
+  font-size: 1em; }
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word; }
+
+q {
+  quotes: \201C \201D \2018 \2019; }
+
+small {
+  font-size: 80%; }
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -.5em; }
+
+sub {
+  bottom: -.25em; }
+
+img {
+  border: 0; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: .35em .625em .75em; }
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0; }
+
+button, input {
+  line-height: normal; }
+
+button, html input[type=button], input[type=reset], input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer; }
+
+button[disabled], input[disabled] {
+  cursor: default; }
+
+input[type=checkbox], input[type=radio] {
+  box-sizing: border-box;
+  padding: 0; }
+
+input[type=search] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box; }
+
+input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+textarea {
+  overflow: auto;
+  vertical-align: top; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body, figure {
+  margin: 0; }
+
+legend, button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: '';
+  clear: both;
+  height: 0; }
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html {
+  font-size: 100%;
+  /*Default font-size is 16px*/ }
+
+body {
+  max-width: 1920px;
+  margin: 0 auto; }
+
+h1 {
+  margin: 0px;
+  padding: 0px; }
+
+h2 {
+  margin: 0px;
+  padding: 0px; }
+
+h3 {
+  margin: 0px;
+  padding: 0px; }
+
+h4 {
+  margin: 0px;
+  padding: 0px; }
+
+input {
+  border: none;
+  background: none;
+  color: inherit; }
+
+fieldset {
+  border: none; }
+
+button {
+  border: none;
+  background: none; }
+
+nav {
+  margin: 0px;
+  padding: 0px; }
+
+ul {
+  margin: 0px;
+  padding: 0px; }
+
+li {
+  margin: 0px;
+  padding: 0px;
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+p {
+  margin: 0px;
+  padding: 0px; }
+
+header {
+  background-image: url(../assets/headerHero.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 80px;
+  padding-bottom: 55px;
+  text-align: center; }
+
+header h1 {
+  font-family: 'Medula One', cursive;
+  letter-spacing: 10px;
+  font-size: 5.25rem; }
+
+header h3 {
+  letter-spacing: 5px;
+  font-size: 1.875rem; }
+
+header a {
+  display: block;
+  background-color: #B99F65;
+  color: white;
+  margin: 0 auto;
+  width: 130px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 50px;
+  margin-top: 25px;
+  text-transform: uppercase;
+  transition: all 0.5s;
+  font-size: 1rem; }
+  header a:hover {
+    background-color: #fff;
+    color: #B99F65; }
+
+main .wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  text-align: center; }
+
+main button {
+  background-color: #B99F65;
+  padding: 10px 30px;
+  margin-bottom: 10px;
+  border-radius: 50px;
+  border: 2px solid transparent;
+  color: white;
+  transition: all 0.5s; }
+  main button:hover {
+    background-color: white;
+    border: 2px solid #B99F65;
+    color: #B99F65; }
+
+main a {
+  display: block;
+  background-color: #B99F65;
+  color: white;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  width: 200px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 50px;
+  text-align: center;
+  transition: all 0.5s;
+  font-size: 1rem; }
+  main a:hover {
+    background-color: #fff;
+    color: #B99F65; }
+
+.weapons__section {
+  width: 33.3333%; }
+
+.armors__section {
+  width: 33.3333%; }
+
+.elixir__section {
+  width: 33.3333%; }
+
+.weapons__list {
+  padding: 0 20px;
+  height: 600px;
+  overflow: scroll; }
+
+.armors__list {
+  padding: 0 20px;
+  height: 770px;
+  overflow: scroll; }
+
+.elixir__list {
+  padding: 0 20px;
+  height: 600px;
+  overflow: scroll; }
+
+.weapons:hover {
+  background-color: #00A3DA; }
+
+.weapons {
+  padding: 10px 30px;
+  border-radius: 10px; }
+
+.weapons h2 {
+  margin: 20px 0px; }
+
+.weapons img {
+  margin-bottom: 20px; }
+
+.weapons p {
+  margin-bottom: 20px; }
+
+.weapons .description {
+  line-height: 30px; }
+
+.display_weapons {
+  background: #00A3DA; }
+
+.hide_weapons {
+  display: none; }
+
+.armors:hover {
+  background-color: #00A3DA; }
+
+.armors {
+  padding: 10px 30px;
+  border-radius: 10px; }
+
+.armors h2 {
+  margin: 20px 0px; }
+
+.armors img {
+  margin-bottom: 20px; }
+
+.armors p {
+  margin-bottom: 20px; }
+
+.armors .description {
+  line-height: 30px; }
+
+.display_armors {
+  background: #00A3DA; }
+
+.hide_armors {
+  display: none; }
+
+.elixir:hover {
+  background-color: #00A3DA; }
+
+.elixir {
+  padding: 10px 30px;
+  border-radius: 10px; }
+
+.elixir h2 {
+  margin: 20px 0px; }
+
+.elixir img {
+  margin-bottom: 35px; }
+
+.elixir p {
+  margin-bottom: 20px; }
+
+.elixir .description {
+  line-height: 30px; }
+
+.display_elixir {
+  background: #00A3DA; }
+
+.hide_elixir {
+  display: none; }
+
+footer {
+  background-image: url(../assets/footerHero.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 750px;
+  padding-top: 400px;
+  text-align: center; }
+
+footer h2 {
+  font-family: 'Medula One', serif;
+  font-size: 5rem; }
+
+footer h4 {
+  margin-top: 15px;
+  font-size: 1rem; }
+
+body {
+  background-image: url("../assets/botwBackgroundPattern.jpg");
+  font-family: 'Libre Baskerville', serif;
+  color: #fff; }
+
+.wrapper {
+  max-width: 1080px;
+  margin: 0 auto; }
+
+.armors:hover {
+  background-color: #00A3DA; }
+
+.armors {
+  padding: 10px 30px;
+  border-radius: 10px; }
+
+.armors h2 {
+  margin: 20px 0px; }
+
+.armors img {
+  margin-bottom: 20px; }
+
+.armors p {
+  margin-bottom: 20px; }
+
+.armors .description {
+  line-height: 30px; }
+
+.display_armors {
+  background: #00A3DA; }
+
+.hide_armors {
+  display: none; }
+
+html {
+  font-size: 100%;
+  /*Default font-size is 16px*/ }
+
+body {
+  max-width: 1920px;
+  margin: 0 auto; }
+
+h1 {
+  margin: 0px;
+  padding: 0px; }
+
+h2 {
+  margin: 0px;
+  padding: 0px; }
+
+h3 {
+  margin: 0px;
+  padding: 0px; }
+
+h4 {
+  margin: 0px;
+  padding: 0px; }
+
+input {
+  border: none;
+  background: none;
+  color: inherit; }
+
+fieldset {
+  border: none; }
+
+button {
+  border: none;
+  background: none; }
+
+nav {
+  margin: 0px;
+  padding: 0px; }
+
+ul {
+  margin: 0px;
+  padding: 0px; }
+
+li {
+  margin: 0px;
+  padding: 0px;
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+p {
+  margin: 0px;
+  padding: 0px; }
+
+.elixir:hover {
+  background-color: #00A3DA; }
+
+.elixir {
+  padding: 10px 30px;
+  border-radius: 10px; }
+
+.elixir h2 {
+  margin: 20px 0px; }
+
+.elixir img {
+  margin-bottom: 35px; }
+
+.elixir p {
+  margin-bottom: 20px; }
+
+.elixir .description {
+  line-height: 30px; }
+
+.display_elixir {
+  background: #00A3DA; }
+
+.hide_elixir {
+  display: none; }
+
+.food:hover {
+  background-color: #00A3DA; }
+
+.food {
+  padding: 10px 30px;
+  border-radius: 10px; }
+
+.food h2 {
+  margin: 20px 0px; }
+
+.food img {
+  margin-bottom: 20px; }
+
+.food p {
+  margin-bottom: 20px; }
+
+.food .description {
+  line-height: 30px; }
+
+.display_food {
+  background: #00A3DA; }
+
+.hide_food {
+  display: none; }
