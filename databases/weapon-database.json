@@ -12,6 +12,24 @@
     "Description": "This magical sword was forged in the lava of Death Mountain. It leaves white-hot flames in its wake when the blade glows red."
   },
   {
+    "Weapon Name": "Frostblade",
+    "Weapon Image": "./public/assets/BotW_Frostblade_Icon.png",
+    "Attack": 20,
+    "Description": "A magical sword forged in the frigid mountains of the Hebra region. When the blade glows blue, enemies struck by it will become frozen."
+  },
+  {
+    "Weapon Name": "Thunderblade",
+    "Weapon Image": "./public/assets/BotW_Thunderblade_Icon.png",
+    "Attack": 22,
+    "Description": "A magical sword forged and refined by lightning from the Hyrule Hills. When the blade shines with a golden light, it will electrocute enemies struck by it."
+  },
+  {
+    "Weapon Name": "Scimitar of the Seven",
+    "Weapon Image": "./public/assets/BotW_Scimitar_of_the_Seven_Icon.png",
+    "Attack": 32,
+    "Description": "A famous sword once beloved by the Gerudo Champion Urbosa. It is said that when Urbosa swung this sword in battle, her movements resembled a beautiful dance."
+  },      
+  {
     "Weapon Name": "Boulder Breaker",
     "Weapon Image": "./public/assets/BotW_Boulder_Breaker_Icon.png",
     "Attack": 60,
@@ -22,11 +40,5 @@
     "Weapon Image": "./public/assets/BotW_Lightscale_Trident_Icon.png",
     "Attack": 22,
     "Description": "A spear of peerless grace cherished by the Zora Champion Mipha. Although Mipha specialized in healing abilities, her spearmanship was in a class all its own."
-  },
-  {
-    "Weapon Name": "Scimitar of the Seven",
-    "Weapon Image": "./public/assets/BotW_Scimitar_of_the_Seven_Icon.png",
-    "Attack": 32,
-    "Description": "A famous sword once beloved by the Gerudo Champion Urbosa. It is said that when Urbosa swung this sword in battle, her movements resembled a beautiful dance."
   }
 ]

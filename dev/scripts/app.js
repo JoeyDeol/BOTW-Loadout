@@ -234,26 +234,33 @@ class App extends React.Component {
         </header>
         <main id="loadoutStart">
           <div className="wrapper">
-            <section className='weapons__section'>
-              <div className='weapons__list'>
-                <button onClick={this.getWeapon}>Weapons</button>
-                {this.state.showWeapons ? <Weapon /> : null}
+            <section className='instructions__section'>
+              <div className='instructions'>
+                <h2>Select a Weapon, Armor Set, and an Elixir.</h2>
               </div>
             </section>
-            <section className='armors__section'>
-              <div className='armors__list'>
-                <button onClick={this.getArmor}>Armors</button>
-                {this.state.showArmors ? <Armor /> : null}
-              </div>
-            </section>
-            <section className='elixir__section'>
-              <div className='elixir__list'>
-                <button onClick={this.getElixir}>Elixirs</button>
-                {this.state.showElixir ? <Elixir /> : null}
-              </div>
-            </section>
+            <div className="loadout">
+              <section className='weapons__section'>
+                <div className='weapons__list'>
+                  <button onClick={this.getWeapon}>Weapons</button>
+                  {this.state.showWeapons ? <Weapon /> : null}
+                </div>
+              </section>
+              <section className='armors__section'>
+                <div className='armors__list'>
+                  <button onClick={this.getArmor}>Armors</button>
+                  {this.state.showArmors ? <Armor /> : null}
+                </div>
+              </section>
+              <section className='elixir__section'>
+                <div className='elixir__list'>
+                  <button onClick={this.getElixir}>Elixirs</button>
+                  {this.state.showElixir ? <Elixir /> : null}
+                </div>
+              </section>
+            </div>
+            <AnchorLink href="#loadoutEnd">And Remember...</AnchorLink>
           </div>
-          <AnchorLink href="#loadoutEnd">And Remember...</AnchorLink>
         </main>
         <footer>
           <div id="loadoutEnd" className="wrapper">
