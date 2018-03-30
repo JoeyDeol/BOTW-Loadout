@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 
+// FIREBASE CODE STARTS HERE!
 // Initialize Firebase
 var config = {
   apiKey: "AIzaSyDW_b13sCnHwKn4hUMtCyqqFiccGASKQho",
@@ -13,12 +14,15 @@ var config = {
   messagingSenderId: "775425643658"
 };
 firebase.initializeApp(config);
+// FIREBASE CODE ENDS HERE!
 
+// WEAPON COMPONENT STARTS HERE!
 class Weapon extends React.Component {
   constructor() {
     super();
     this.state = {
       weapons: [],
+      userWeapon: [],
     }
   this.weaponSelect = this.weaponSelect.bind(this);
   };
@@ -34,18 +38,34 @@ class Weapon extends React.Component {
   };
 
   weaponSelect(e) {
-    e.target.closest('.weapons').classList.add('display_weapons');
     const list = document.getElementsByClassName('weapons');
-
     for (let i = 0; i < list.length; i++) {
       if (list[i].className == 'weapons display_weapons') {
-      }else {
-        list[i].classList.add('hide_weapons');
+        list[i].classList.remove('display_weapons');
       }
+      // else {
+      //   list[i].classList.add('hide_weapons');
+      // }
     }
+    e.target.closest('.weapons').classList.add('display_weapons');
+
+    const userSelectedWeaponName = e.target.value;    
+    const weaponSearch = () => {
+      const weaponOptions = this.state.weapons
+      const selectedWeapon = weaponOptions.filter((weapon) => {
+        return weapon['Weapon Name'] === `${userSelectedWeaponName}`
+      })
+      console.log(selectedWeapon);
+      return selectedWeapon;
+    }
+    const weaponChoice = weaponSearch();
+    this.setState({
+      userWeapon: weaponChoice
+    })
   }
 
   render() {
+    console.log(this.state.userWeapon);
     return (
       <div>
         {this.state.weapons.map((item) => {
@@ -57,7 +77,7 @@ class Weapon extends React.Component {
                 <img src={item['Weapon Image']} />
                 <p>Attack: {item.Attack}</p>
                 <p className="description">{item.Description}</p>
-                <button onClick={(e) => this.weaponSelect(e)}>Select</button>
+                <button onClick={(e) => this.weaponSelect(e)} value={item['Weapon Name']}>Select</button>
               </div>
             )
           })}  
@@ -65,7 +85,9 @@ class Weapon extends React.Component {
     )
   }
 };
+// WEAPON COMPONENT ENDS HERE!
 
+// ARMOR COMPONENT STARTS HERE!
 class Armor extends React.Component {
   constructor() {
     super();
@@ -118,7 +140,9 @@ class Armor extends React.Component {
     )
   }
 };
+// ARMOR COMPONENT ENDS HERE!
 
+// ELIXIR COMPONENT STARTS HERE!
 class Elixir extends React.Component {
   constructor() {
     super();
@@ -170,7 +194,9 @@ class Elixir extends React.Component {
     )
   }
 };
+// ELIXIR COMPONENT ENDS HERE!
 
+// APP COMPONENT STARTS HERE!
 class App extends React.Component {
   constructor() {
     super();
@@ -180,12 +206,12 @@ class App extends React.Component {
       showElixir: false,
       userSelect: false,
     };
-  this.getWeapon = this.getWeapon.bind(this);
-  this.getArmor = this.getArmor.bind(this);
-  this.getElixir = this.getElixir.bind(this);
+  this.displayWeapons = this.displayWeapons.bind(this);
+  this.displayArmors = this.displayArmors.bind(this);
+  this.displayElixirs = this.displayElixirs.bind(this);
   }
 
-  getWeapon () {
+  displayWeapons () {
     if (this.state.showWeapons === false) {
       this.setState({
         showWeapons: true
@@ -197,7 +223,7 @@ class App extends React.Component {
     }
   }
 
-  getArmor () { 
+  displayArmors () { 
     if (this.state.showArmors === false) {
       this.setState({
         showArmors: true
@@ -209,7 +235,7 @@ class App extends React.Component {
     }
   }
 
-  getElixir() {
+  displayElixirs () {
     if (this.state.showElixir === false) {
       this.setState({
         showElixir: true
@@ -242,19 +268,19 @@ class App extends React.Component {
             <div className="loadout">
               <section className='weapons__section'>
                 <div className='weapons__list'>
-                  <button onClick={this.getWeapon}>Weapons</button>
+                  <button onClick={this.displayWeapons}>Weapons</button>
                   {this.state.showWeapons ? <Weapon /> : null}
                 </div>
               </section>
               <section className='armors__section'>
                 <div className='armors__list'>
-                  <button onClick={this.getArmor}>Armors</button>
+                  <button onClick={this.displayArmors}>Armors</button>
                   {this.state.showArmors ? <Armor /> : null}
                 </div>
               </section>
               <section className='elixir__section'>
                 <div className='elixir__list'>
-                  <button onClick={this.getElixir}>Elixirs</button>
+                  <button onClick={this.displayElixirs}>Elixirs</button>
                   {this.state.showElixir ? <Elixir /> : null}
                 </div>
               </section>
@@ -272,5 +298,6 @@ class App extends React.Component {
     )
   }
 };
+// APP COMPONENT ENDS HERE!
 
 ReactDOM.render(<App />, document.getElementById('app'));
