@@ -57,19 +57,19 @@ main {
 
 .weapons__list {
     padding: 0 20px;
-    height: 100vh;
+    height: 770px;
     overflow: scroll;
 }
 
 .armors__list {
     padding: 0 20px;
-    height: 100vh;
+    height: 770px;
     overflow: scroll;
 }
 
 .elixir__list  {
     padding: 0 20px;
-    height: 100vh;
+    height: 770px;
     overflow: scroll;
 }
 
@@ -80,5 +80,11 @@ main {
     .weapons__section, .armors__section, .elixir__section {
         width: 100%;
         margin-top: 50px;
+    }
+    .weapons__list, .armors__list, .elixir__list {
+        height: 400px;
+    }
+    .description{
+        display: none;
     }
 }

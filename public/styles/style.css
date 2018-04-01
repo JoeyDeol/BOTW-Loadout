@@ -180,6 +180,9 @@ li {
   padding: 0px;
   list-style: none; }
 
+img {
+  width: 100%; }
+
 a {
   text-decoration: none; }
 
@@ -192,14 +195,17 @@ header {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  padding-top: 80px;
-  padding-bottom: 55px;
+  padding-top: 15vh;
+  padding-bottom: 10vh;
   text-align: center; }
 
 header h1 {
   font-family: 'Medula One', cursive;
   letter-spacing: 10px;
   font-size: 5.25rem; }
+
+header img {
+  width: 48%; }
 
 header h3 {
   letter-spacing: 5px;
@@ -222,11 +228,11 @@ header a {
     background-color: #fff;
     color: #B99F65; }
 
-@media (min-width: 1081px) {
-  header {
-    height: 100vh;
-    padding-top: 15vh;
-    padding-bottom: 10vh; } }
+@media (max-width: 767px) {
+  header h1 {
+    font-size: 3.125rem; }
+  header h3 {
+    font-size: 1.25rem; } }
 
 main {
   padding-top: 100px;
@@ -277,17 +283,17 @@ main {
 
 .weapons__list {
   padding: 0 20px;
-  height: 100vh;
+  height: 770px;
   overflow: scroll; }
 
 .armors__list {
   padding: 0 20px;
-  height: 100vh;
+  height: 770px;
   overflow: scroll; }
 
 .elixir__list {
   padding: 0 20px;
-  height: 100vh;
+  height: 770px;
   overflow: scroll; }
 
 @media (max-width: 767px) {
@@ -295,7 +301,11 @@ main {
     flex-wrap: wrap; }
   .weapons__section, .armors__section, .elixir__section {
     width: 100%;
-    margin-top: 50px; } }
+    margin-top: 50px; }
+  .weapons__list, .armors__list, .elixir__list {
+    height: 400px; }
+  .description {
+    display: none; } }
 
 .weapons:hover {
   background-color: #00A3DA; }
@@ -308,6 +318,7 @@ main {
   margin: 20px 0px; }
 
 .weapons img {
+  width: 96px;
   margin-bottom: 20px; }
 
 .weapons p {
@@ -333,6 +344,7 @@ main {
   margin: 20px 0px; }
 
 .armors img {
+  width: 182px;
   margin-bottom: 20px; }
 
 .armors p {
@@ -358,6 +370,7 @@ main {
   margin: 20px 0px; }
 
 .elixir img {
+  width: 47px;
   margin-bottom: 35px; }
 
 .elixir p {
@@ -388,6 +401,10 @@ footer h2 {
 footer h4 {
   margin-top: 15px;
   font-size: 1rem; }
+
+@media (max-width: 767px) {
+  footer h2 {
+    font-size: 3.125rem; } }
 
 body {
   background-image: url("../assets/botwBackgroundPattern.jpg");
