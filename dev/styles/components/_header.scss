@@ -2,11 +2,12 @@ header {
     background-image: url(../assets/headerHero.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh;
-    padding-top: 15vh;
-    padding-bottom: 10vh;
-    // padding-top: 80px;
-    // padding-bottom: 55px;
+    background-position: center;
+    // height: 100vh;
+    // padding-top: 15vh;
+    // padding-bottom: 10vh;
+    padding-top: 80px;
+    padding-bottom: 55px;
     text-align: center;
 }
 
@@ -37,5 +38,13 @@ header a {
     &:hover {
         background-color: #fff;
         color: #B99F65;
+    }
+}
+
+@media (min-width: 1081px) {
+    header {
+        height: 100vh;
+        padding-top: 15vh;
+        padding-bottom: 10vh;
     }
 }

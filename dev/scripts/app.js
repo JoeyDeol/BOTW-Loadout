@@ -38,34 +38,34 @@ class Weapon extends React.Component {
   };
 
   weaponSelect(e) {
+    e.target.closest('.weapons').classList.add('display_weapons');
     const list = document.getElementsByClassName('weapons');
     for (let i = 0; i < list.length; i++) {
       if (list[i].className == 'weapons display_weapons') {
-        list[i].classList.remove('display_weapons');
+        // list[i].classList.remove('display_weapons');
       }
-      // else {
-      //   list[i].classList.add('hide_weapons');
-      // }
+      else {
+        list[i].classList.add('hide_weapons');
+      }
     }
-    e.target.closest('.weapons').classList.add('display_weapons');
 
-    const userSelectedWeaponName = e.target.value;    
-    const weaponSearch = () => {
-      const weaponOptions = this.state.weapons
-      const selectedWeapon = weaponOptions.filter((weapon) => {
-        return weapon['Weapon Name'] === `${userSelectedWeaponName}`
-      })
-      console.log(selectedWeapon);
-      return selectedWeapon;
-    }
-    const weaponChoice = weaponSearch();
-    this.setState({
-      userWeapon: weaponChoice
-    })
+    // const userSelectedWeaponName = e.target.value;    
+    // const weaponSearch = () => {
+    //   const weaponOptions = this.state.weapons
+    //   const selectedWeapon = weaponOptions.filter((weapon) => {
+    //     return weapon['Weapon Name'] === `${userSelectedWeaponName}`
+    //   })
+    //   console.log(selectedWeapon);
+    //   return selectedWeapon;
+    // }
+    // const weaponChoice = weaponSearch();
+    // this.setState({
+    //   userWeapon: weaponChoice
+    // })
   }
 
   render() {
-    console.log(this.state.userWeapon);
+    // console.log(this.state.userWeapon);
     return (
       <div>
         {this.state.weapons.map((item) => {

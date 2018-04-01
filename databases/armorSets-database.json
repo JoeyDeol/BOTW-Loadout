@@ -1,5 +1,13 @@
 [
   {
+    "Armor": "Ancient Armor",
+    "Armor Image": "./public/assets/BotW_Ancient_Armor.jpg",
+    "Defense": 84,
+    "Effect": "Guardian Resist Up",
+    "Full Set Bonus": "Ancient Proficency (Boost Ancient Wpn Dmg by 80%)",
+    "Description": "This armor was created by ancient Sheikah technology using Guardian parts. Equipping it will reduce the damage you take from ancient weaponry."
+  },  
+  {
     "Armor": "Barbarian Armor",
     "Armor Image": "./public/assets/BotW_Barbarian_Armor.jpg",
     "Defense": 60,
@@ -16,14 +24,6 @@
     "Description": "The ancient technology in this gear will make you a better climber. The special no-slip gloves help you use your energy more efficiently to facilitate nimble climbing."
   },
   {
-    "Armor": "Zora Armor",
-    "Armor Image": "./public/assets/BotW_Zora_Armor.jpg",
-    "Defense": 60,
-    "Effect": "Swim Speed Up",
-    "Full Set Bonus": "Swim Dash Stamina Up",
-    "Description": "Custom armor painstakingly crafted by each generation's Zora princess for her future husband. Wearing it will give you the ability to swim up waterfalls."
-  },
-  {
     "Armor": "Desert Voe Armor",
     "Armor Image": "./public/assets/BotW_Desert_Voe_Armor.jpg",
     "Defense": 60,
@@ -38,5 +38,21 @@
     "Effect": "None",
     "Full Set Bonus": "None",
     "Description": "A common garb that achieved widespread popularity in Hyrule, particularly among travelers. Its light-yet-sturdy fabric doesn't limit movement."
-  }
+  },
+  {
+    "Armor": "Snowquill Armor",
+    "Armor Image": "./public/assets/BotW_Rito_Armor.jpg",
+    "Defense": 60,
+    "Effect": "Cold Resistance",
+    "Full Set Bonus": "Unfreezable",
+    "Description": "Lined with molted Rito feathers, this tunic was made by Rito artisans for Hylians visiting cold climates. The feathers are stacked in each layer to retain body heat."
+  },  
+  {
+    "Armor": "Zora Armor",
+    "Armor Image": "./public/assets/BotW_Zora_Armor.jpg",
+    "Defense": 60,
+    "Effect": "Swim Speed Up",
+    "Full Set Bonus": "Swim Dash Stamina Up",
+    "Description": "Custom armor painstakingly crafted by each generation's Zora princess for her future husband. Wearing it will give you the ability to swim up waterfalls."
+  }  
 ]

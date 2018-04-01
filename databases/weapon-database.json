@@ -28,7 +28,19 @@
     "Weapon Image": "./public/assets/BotW_Scimitar_of_the_Seven_Icon.png",
     "Attack": 32,
     "Description": "A famous sword once beloved by the Gerudo Champion Urbosa. It is said that when Urbosa swung this sword in battle, her movements resembled a beautiful dance."
-  },      
+  },
+  {
+    "Weapon Name": "Windcleaver",
+    "Weapon Image": "./public/assets/BotW_Windcleaver_Icon.png",
+    "Attack": 40,
+    "Description": "This sword is favored by high-ranking members of the Yiga. When wielded by a proficient fighter, its unique shape cleaves the very wind and creates a vacuum."
+  },
+  {
+    "Weapon Name": "Ancient Bladesaw",
+    "Weapon Image": "./public/assets/BotW_Ancient_Bladesaw_Icon.png",
+    "Attack": 55,
+    "Description": "This two-handed sword was forged using ancient Sheikah technology. Its unique rotating blades give it impressive cutting power that will slice enemies to shreds."
+  },          
   {
     "Weapon Name": "Boulder Breaker",
     "Weapon Image": "./public/assets/BotW_Boulder_Breaker_Icon.png",
@@ -36,9 +48,33 @@
     "Description": "This two-handed weapon was once wielded by the Goron Champion Daruk. Daruk made swinging it around look easy, but a Hylian would need an immense amount of strength."
   },
   {
+    "Weapon Name": "Savage Lynel Crusher",
+    "Weapon Image": "./public/assets/BotW_Savage_Lynel_Crusher_Icon.png",
+    "Attack": 78,
+    "Description": "This Lynel-made two-handed weapon is immensely heavy thanks to a rare metal from Death Mountain's peak. The power of its downward swing is in a class all its own."
+  },  
+  {
+    "Weapon Name": "Guardian Spear++",
+    "Weapon Image": "./public/assets/BotW_Guardian_Spear_Icon.png",
+    "Attack": 20,
+    "Description": "This Guardian spear's output has been boosted to the maximum. The spearhead is designed for optimal stabbing, capable of easily piercing most armor."
+  },  
+  {
     "Weapon Name": "Lightscale Trident",
     "Weapon Image": "./public/assets/BotW_Lightscale_Trident_Icon.png",
     "Attack": 22,
     "Description": "A spear of peerless grace cherished by the Zora Champion Mipha. Although Mipha specialized in healing abilities, her spearmanship was in a class all its own."
-  }
+  },
+  {
+    "Weapon Name": "Royal Halberd",
+    "Weapon Image": "./public/assets/BotW_Royal_Halberd_Icon.png",
+    "Attack": 26,
+    "Description": "This spear was issued to the knights who guarded Hyrule Castle's throne room. Its ornate design was applied by a craftsman in service to the royal family."
+  },  
+  {
+    "Weapon Name": "Savage Lynel Spear",
+    "Weapon Image": "./public/assets/BotW_Savage_Lynel_Spear_Icon.png",
+    "Attack": 30,
+    "Description": "White-haired Lynels favor this brutal spear. Its axe-like spearhead and exceptional weight give it absolute destructive power."
+  }  
 ]

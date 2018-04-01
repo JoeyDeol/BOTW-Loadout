@@ -191,9 +191,9 @@ header {
   background-image: url(../assets/headerHero.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh;
-  padding-top: 15vh;
-  padding-bottom: 10vh;
+  background-position: center;
+  padding-top: 80px;
+  padding-bottom: 55px;
   text-align: center; }
 
 header h1 {
@@ -221,6 +221,12 @@ header a {
   header a:hover {
     background-color: #fff;
     color: #B99F65; }
+
+@media (min-width: 1081px) {
+  header {
+    height: 100vh;
+    padding-top: 15vh;
+    padding-bottom: 10vh; } }
 
 main {
   padding-top: 100px;
@@ -271,18 +277,25 @@ main {
 
 .weapons__list {
   padding: 0 20px;
-  height: 770px;
+  height: 100vh;
   overflow: scroll; }
 
 .armors__list {
   padding: 0 20px;
-  height: 770px;
+  height: 100vh;
   overflow: scroll; }
 
 .elixir__list {
   padding: 0 20px;
-  height: 770px;
+  height: 100vh;
   overflow: scroll; }
+
+@media (max-width: 767px) {
+  .loadout {
+    flex-wrap: wrap; }
+  .weapons__section, .armors__section, .elixir__section {
+    width: 100%;
+    margin-top: 50px; } }
 
 .weapons:hover {
   background-color: #00A3DA; }
@@ -363,6 +376,7 @@ footer {
   background-image: url(../assets/footerHero.png);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   height: 100vh;
   padding-top: 50vh;
   text-align: center; }
@@ -382,4 +396,5 @@ body {
 
 .wrapper {
   max-width: 1080px;
+  width: 95%;
   margin: 0 auto; }
